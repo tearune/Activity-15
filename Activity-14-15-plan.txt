@@ -73,8 +73,8 @@ Steps:
 
 
 Activity 15 plan
-Goal: create and maintain a Repo.
-Needs: github desktop
+Goal: create and maintain the Activity 15 Repo.
+Needs: github desktop, 
 
 Steps:
 1. Create the Repo, titled Activity-15
