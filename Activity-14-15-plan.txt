@@ -1,0 +1,96 @@
+Activity 14 Plan
+Goal: Make a QMD file that produces a PDF with wrangled Army Forces Data with a 
+subsetted table, a time series for the four names, a plot for the Box problem
+volume function.
+
+
+Minor goals: fix the wrangling code for Army Forces data, create subset and a 
+table for the subset, edit Names Time series (if needed), make the box problem 
+with ggplot2, write an reflection and the Code appendix
+
+
+Needs: quarto, Armed Forces data, Babynames data from DCdata, tidyverse, knitr,
+kableExtra, googlesheets4
+
+
+Steps:
+1. Open RStudio 
+2. Create a QMD
+3. YAML header
+   1. Set a title
+   2. Set author
+   3. Data - start date, date modified (now)
+   4. Format - pdf
+   5. Embed resources into the document
+   6. Set table of contents to false
+   7. Figures alignment centered + caption location on the top
+   8. To get the 1 inch margins, set geometry (top, left, right, bottom) to 1 in
+   9. Execute: set echo and warning to false
+4. Armed Forces Data - wrangling
+   1. Fix the local files by using googlesheets4
+   2. install googlesheets4 package
+   3. Library in googlesheet4 package
+   4. Set ArmyRaw to read the sheet from the google sheets link 
+   5. Make sure two separate data sets are made !!!
+5. Armed Forces Subset table
+   1. Choose a branch (marine corps)
+   2. Choose a pay-grade (enlisted)
+   3. Using filter, filter by Pay_grade and Branch
+   4. Use tabyl with Rank and Sex
+   5. Adorn totals and percentages, format the percentages to round to 2 digits, and out of ‘all’
+   6. For title set the rows to be rank and the columns to be sex
+   7. Format using kable and kableExtra
+   8. Add a label using tbl- 
+   9. Add a caption with tbl-cap
+   10. Add alt text using tbl-alt
+6. Write narrative text
+7. Popular Baby Names Project
+   1. Using the code from Activity 13
+   2. Add shape to the time series and alt text 
+   3. Add a label using fig-
+   4. Add a caption using fig-cap
+   5. Add alt text using fig-alt
+8. Write narrative text
+9. The Box problem
+   1. Take the function code from activity 14 (but create the graph using ggplot2 instead)
+   2. Create a data frame of inputs for cutout length (x)
+   3. Ggplot, data is the data frame of inputs, mapping is just x = x
+   4. Stat function
+      1. Geometry is line, width is 1 (change as needed)
+      2. Function is the volume_of_box 
+      3. Additional Arguments are the length as 36 inches and width 48 inches
+   5. Labels
+      1. Add title
+      2. Add x-axis and y-axis labels
+      3. Add alt text
+   6. Change scale increments
+   7. Add a label using fig-
+   8. Add a caption using fig-cap
+   9. Add an alt text, fig-alt
+   10. Write narrative text
+10. Add a self reflection part
+11. Add a code appendix using the {r} header from the crash course
+
+
+Activity 15 plan
+Goal: create and maintain a Repo.
+Needs: github desktop
+
+Steps:
+1. Create the Repo, titled Activity-15
+2. Created a branch, titled dev-Ankita
+3. Update the README
+   1. Add a purpose
+   2. Data and where it is from
+   3. Plan for the repository
+   4. Organization of the repo 
+   5. Contact information
+4. Commit the creation of the repo + updated README
+5. Create an issue about missing Activity 14 work (the QMD)
+6. Add the file into the repo, then commit about resolving issue 1
+7. Create another issue about the missing plans and Activity 14 PDF
+8. Add the files into the repo, then commit about resolving issue 2
+9. Edit/Update the QMD if/as needed
+10. Submit a pull request to the main branch
+11. make sure everything is updated and looks correct
+Bonus: commit as often as needed.
